@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import css from './Filter.module.css';
 import { changeFilter, getFilter } from '../../../redux/slicer';
@@ -26,14 +25,5 @@ const Filter = () => {
     </>
   );
 };
-
-// Filter.propTypes = {
-//   onChange: PropTypes.func.isRequired,
-//   value: PropTypes.string.isRequired,
-//   name: PropTypes.string.isRequired,
-//   type: PropTypes.string.isRequired,
-//   title: PropTypes.string.isRequired,
-//   pattern: PropTypes.string.isRequired,
-// };
 
 export default Filter;
