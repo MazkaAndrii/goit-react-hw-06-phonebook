@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { nanoid } from 'nanoid/non-secure';
+import { nanoid } from '@reduxjs/toolkit';
 import { addContact, getContacts } from '../../../redux/slicer';
 import Input from '../Input/Input';
 import Label from '../Label/Label';
@@ -10,8 +10,8 @@ const Form = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
-  const nameInputId = useMemo(() => nanoid(), []);
-  const numberInputId = useMemo(() => nanoid(), []);
+  const nameInputId = nanoid();
+  const numberInputId = nanoid();
 
   const dispatch = useDispatch();
   const contacts = useSelector(getContacts);
